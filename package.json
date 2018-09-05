@@ -1,0 +1,55 @@
+{
+  "name": "vue-hammerjs",
+  "version": "1.0.1",
+  "description": "Vue Directive Wrapper for Hammer.js",
+  "license": "MIT",
+  "main": "dist/index.common.js",
+  "module": "dist/index.mjs",
+  "jsnext:main": "dist/index.mjs",
+  "types": "dist/typings/index.d.ts",
+  "author": "xiaoping(edwardhjp@gmail.com)",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/excaliburhan/vue-hammerjs.git"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "dev": "npm run clean && tsc -w",
+    "build": "npm run clean && npm run lint && node scripts/build.js",
+    "lint": "tslint --project tsconfig.json",
+    "test": "npm run lint && npm run build && npm run jasmine",
+    "jasmine": "istanbul cover jasmine-node test",
+    "prepublish": "npm run test"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.31",
+    "ghooks": "^2.0.4",
+    "istanbul": "^0.4.5",
+    "jasmine-node": "^1.15.0",
+    "lodash.merge": "^4.6.1",
+    "multi-shell": "^1.0.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.58.2",
+    "rollup-plugin-typescript2": "^0.13.0",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^7.1.0",
+    "typescript": "^2.9.2",
+    "uglify-js": "^3.4.8"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}

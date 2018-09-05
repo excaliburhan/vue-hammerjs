@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "./dist/",
+    "target": "es5",
+    "lib": ["esnext"],
+    "types": ["node"],
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "allowJs": false,
+    "allowUnreachableCode": true,
+    "sourceMap": true,
+    "strict": true
+  },
+  "exclude": ["node_modules", "dist"]
+}
