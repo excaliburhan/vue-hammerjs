@@ -67,7 +67,6 @@ export default {
     })
   },
   unbind () {
-    console.log(1)
     if (mc) {
       mc.destroy()
       mc = null

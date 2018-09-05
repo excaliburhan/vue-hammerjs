@@ -1,22 +1,18 @@
 # vue-hammerjs
 Vue Directive Wrapper for Hammer.js
 
----
+## Usage
 
-## dev
+```js
+import Vue from 'vue'
+import VueHM from 'vue-hammerjs'
 
-```shell
-npm run dev
-```
+Vue.use(VueHM)
 
-## build
-
-```shell
-npm run build
-```
-
-## test
-
-```shell
-npm test
+<template>
+  <div class="index">
+    <div class="index-item" v-hm:swipe="onSwipe">Swipe</div>
+    <div class="index-item" v-hm:doubletap="onDoubleTap">Double Tap</div>
+  </div>
+</template>
 ```
