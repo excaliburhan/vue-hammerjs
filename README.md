@@ -1,5 +1,5 @@
 # vue-hammerjs
-Vue Directive Wrapper for Hammer.js
+Vue Directive Wrapper for Hammer.js.
 
 ## Usage
 
